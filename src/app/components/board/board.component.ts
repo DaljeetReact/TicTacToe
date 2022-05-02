@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent {
-  squares: any[] = [];
-  xIsNext: boolean = true;
-  winner: string = '';
+  squares: any[] = []; // all  the 9 value on the board
+  xIsNext: boolean = true; // determin the current player base on bool value
+  winner: string = ''; // set value using calucate winner function  is any condition matches
 
   constructor() {}
 
   ngOnInit() {
-    this.newGame();
+    this.newGame(); // on load run the function 
   }
 
   newGame() {
@@ -46,13 +46,13 @@ export class BoardComponent {
       [2, 4, 6]
     ];
     for (let i = 0; i < lines.length; i++) {
-      const [a, b, c] = lines[i];
-      if (
+      const [a, b, c] = lines[i];  // destruct the value into abc variable 
+      if ( // this if will check the store value in square array it could be X|O|blank
         this.squares[a] &&
         this.squares[a] === this.squares[b] &&
         this.squares[a] === this.squares[c]
       ) {
-        return this.squares[a];
+        return this.squares[a]; // if found return the value ( X or O )
       }
     }
     return '';
