@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent {
-  squares: string[] = [];
+  squares: any[] = [];
   xIsNext: boolean = true;
   winner: string = '';
 
@@ -26,7 +26,7 @@ export class BoardComponent {
   }
 
   makeMove(idx: number) {
-    if (!this.squares[idx]) {
+    if (!this.squares[idx]) { // check if the square index value is empty
       this.squares.splice(idx, 1, this.player);
       this.xIsNext = !this.xIsNext;
     }

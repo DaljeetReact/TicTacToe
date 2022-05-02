@@ -1,0 +1,33 @@
+main {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 0px;
+}
+  
+app-square {
+    border: 1px gray solid;
+    height: 100px;
+}
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    text-align: center;
+    border: 1px solid;
+    margin: 20px 0px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 10px;
+}
+.heading button {
+    padding: 10px;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid;
+}
+h2{
+    text-align: center;
+}
